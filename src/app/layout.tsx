@@ -1,8 +1,11 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Barlow_Semi_Condensed } from "next/font/google";
 import "./globals.css";
 
-const inter = Inter({ subsets: ["latin"] });
+const barlow_semi_condensed = Barlow_Semi_Condensed({
+  weight: ["500", "600"],
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
   title: "Testimonials grid section",
@@ -15,7 +18,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>{children}</body>
+      <body className={`${barlow_semi_condensed.className} antialiased`}>
+        {children}
+      </body>
     </html>
   );
 }
